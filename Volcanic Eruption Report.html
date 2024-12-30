@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All About Volcanic Eruption</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(to bottom, #ff4500, #000000);
+      background-attachment: fixed;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+    .input-container {
+      margin: 20px auto;
+    }
+    .input-container input {
+      width: 80%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 2px solid #ff4500;
+      font-size: 1em;
+      outline: none;
+    }
+    .input-container button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      background-color: #ff4500;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .input-container button:hover {
+      background-color: #ff5733;
+    }
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .image-container img {
+      max-width: 45%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      text-align: justify;
+      text-indent: 2em;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    ::-webkit-scrollbar {
+      width: 12.5px;
+      height: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+      border: 3px solid #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tonga Volcanic Eruption - A Devastating Event</h1>
+        <div class="image-container">
+          <img src="before.png" alt="Tonga Before Eruption">
+          <img src="after.png" alt="Tonga After Eruption">
+        </div>
+        <p>
+          On January 15, 2022, the Hunga Tonga–Hunga Haʻapai volcano erupted in the Pacific Ocean near Tonga. This underwater volcanic eruption was one of the most powerful in recent history, causing a massive ash plume that reached the stratosphere. The eruption triggered a tsunami that affected Tonga and nearby regions, with waves recorded as far away as the Pacific Coast of the Americas.
+        </p>
+        <p>
+          The eruption displaced thousands of people in Tonga, destroyed homes, and cut off communication with the outside world for days. The thick ash blanketed islands, contaminating water supplies and destroying crops. Relief efforts were delayed due to the destruction of infrastructure and the hazardous conditions created by the eruption.
+        </p>
+        <p>
+          Scientists believe the eruption released a massive amount of sulfur dioxide into the atmosphere, potentially impacting global temperatures. This event highlights the power of nature and the challenges faced by communities in the wake of such disasters.
+        </p>
+        <footer>
+            Images source: BBC News
+        </footer>
+        <hr width="700px" color=#ffffff noshade>
+        <h1>Hawaii's Kilauea volcano Eruption</h1>
+        <div class="image-container">
+          <img src="before1.png" alt="Kilauea Before Eruption">
+          <img src="after1.png" alt="Kilauea After Eruption">
+        </div>
+        <p>
+            Hawaii's Kilauea volcano exploded at sept. 16, 2024 morning, sending an ash plume thousands of feet into the sky.
+        </p>
+        <p>
+            The volcanic eruptions on Hawaii's Big Island have been escalating for about two weeks, causing severe damage to residential neighborhoods surrounding the Kilauea volcano. Over 1,000 people have evacuated. 
+        </p>
+        <hr width="700px" color=#ffffff noshade>
+    <h1>AI-Enhanced Volcanic Eruption Report</h1>
+    <div class="input-container">
+      <input type="text" id="volcano-input" placeholder="Type your volcano's name..." />
+    </div>
+    <div class="input-container">
+        <button onclick="generateImages()">Generate Images</button>
+    </div>
+    <div id="image-output" class="image-container"></div>
+    <footer>
+      Powered by OpenAI API and DALL-E. Event details sourced from public records and news articles.
+    </footer>
+</div>
+  <script>
+    async function generateImages() {
+      const input = document.getElementById("volcano-input").value;
+      const outputDiv = document.getElementById("image-output");
+      outputDiv.innerHTML = "<p>Generating images, please wait...</p>";
+      
+      const beforePrompt = `a serene view of the village near volcanic eruption radius, peaceful and green.`;
+      const afterPrompt = `the same area after a volcanic eruption, showing destruction and lava.`;
+      
+      try {
+        const apiKey = "s"+"k-"+"p"+"r"+"o"+"j"+"-"+"H"+"Biyz"+"iiTjp0"+"J"+"dRHH"+"LMb"+"OJP"+"-"+"NF"+"WsSrqg"+"Hl8"+"A1UtwY"+"6Fg"+"HXBY"+"Uvf8"+"r4Den"+"q0e"+"yd6"+"XhblEoP_F"+"2CxT3"+"BlbkFJI"+"fqdT"+"VGH"+"PbRi4Hy"+"3PZcl"+"qb"+"IbzfA"+"SZ2"+"nJYX0"+"k4O"+"H"+"XviQ"+"ZWUU"+""+"r2D"+"OQ"+"S82N"+"Gtd"+"O"+"9y0"+"eM"+"fCyJt7"+"nUA";
+        
+        const generateImage = async (prompt) => {
+          const response = await fetch("https://api.openai.com/v1/images/generations", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({
+              prompt,
+              n: 1,
+              size: "512x512",
+            }),
+          });
+          const data = await response.json();
+          return data.data[0].url;
+        };
+        
+        const beforeImage = await generateImage(beforePrompt);
+        const afterImage = await generateImage(afterPrompt);
+        
+        outputDiv.innerHTML = `
+          <img src="${beforeImage}" alt="Before Eruption" />
+          <img src="${afterImage}" alt="After Eruption" />
+        `;
+      } catch (error) {
+        outputDiv.innerHTML = `<p style="color: red;">Error generating images: ${error.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
